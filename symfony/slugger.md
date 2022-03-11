@@ -41,4 +41,4 @@ class MySlugger {
 
 ## Utiliser ce Slugger
 
-Il en reste plus qu'a utilser ce nouveau Service en tant que dépendance dans une autre méthode d'une autre Class (ATTENTION : il faudra faire un use  de cette nouvelle dépendance)
+Il en reste plus qu'a utiliser ce nouveau Service en tant que dépendance dans une autre méthode d'une autre Class (ATTENTION : il faudra faire un use  de cette nouvelle dépendance)

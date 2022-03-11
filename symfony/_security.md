@@ -61,7 +61,7 @@ bin/console make:controller Login
 ```
 2. Puis faire la route manuellement pour logout en suivant la doc
 
-- POSSIBILITE N°2 (attention, vérifier dans doc si methode dépréciée)
+- POSSIBILITE N°2 (attention, vérifier dans doc car methode dépréciée)
 
 ```
 bin/console make:auth
@@ -116,5 +116,3 @@ access_control:
 # Sécuriser toutes les routes du backoffice /add /edit /delete pour les admin
 - { path: ^/backoffice/.*/(add|new|edit|delete), roles: ROLE_ADMIN }
 ```
-
-Est-ce que tu as vu que j'avais fait une pull Request sur GitHub du repo symfo-recap ? Car je ne suis pas sur qu'elle soit bien passée...

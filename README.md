@@ -26,5 +26,7 @@ Un récap des informations et commandes dans Symfony
 - [Voter](symfony/voter.md)
 - [Slugger](symfony/slugger.md)
 - [Commands](symfony/commands.md)
+- [Events](symfony/events.md)
+
 
 
