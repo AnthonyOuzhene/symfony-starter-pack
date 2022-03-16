@@ -12,7 +12,7 @@ Un récap des informations et commandes dans Symfony
 - [Include vs Require](php/include_require.md) 
 - [Les erreurs de PHP](php/erreurs.md)
 
-## A propos de symfony
+## A propos de Symfony
 
 - [Starter](symfony/starter.md)
 - [Le MVC](symfony/mvc.md)

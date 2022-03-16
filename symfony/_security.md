@@ -39,7 +39,7 @@ bin/console make:migration
 bin/console doctrine:migrations:migrate
 ```
 
-## 3. Hasher les mot de passer
+## 3. Hasher les mots de passe
 
 ```sh
 php bin/console security:hash-password

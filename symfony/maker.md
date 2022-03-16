@@ -94,7 +94,11 @@ bin/console make:voter
 ```sh
 bin/console make:command
 ```
+## Création d'un event
 
+```sh
+bin/console make:subscriber
+```
 ## Sinon RTFM
 
 ```sh

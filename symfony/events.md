@@ -3,21 +3,32 @@
 fenêtres ouverte par l'ORM pour exécuter du code.
 On utilise les Events avant ou après des péthodes d'éxécution du code (`persist`, `flush`, `remove`, etc.)
 
-## Liste des events
+Kernel (le noyau de Symfony) gère le MVC.
+Le Service Container interbient quand on met dans Controller les class en arguments des méthodes.
 
-|Event|Dispatched|by|Lifecycle|Callback|Passed Argument
+## Liste des events de formulaire avec l'ORM Doctrine
 
-|---    |:-:    |:-:    |:-:    |--:    |
 
-preRemove	$em->remove()	Yes	`_LifecycleEventArgs`_
-postRemove	$em->flush()	Yes	`_LifecycleEventArgs`_
-prePersist	$em->persist() on initial persist	Yes	`_LifecycleEventArgs`_
-postPersist	$em->flush()	Yes	`_LifecycleEventArgs`_
-preUpdate	$em->flush()	Yes	`_PreUpdateEventArgs`_
-postUpdate	$em->flush()	Yes	`_LifecycleEventArgs`_
-postLoad	Loading from database	Yes	`_LifecycleEventArgs`_
-loadClassMetadata	Loading of mapping metadata	No	`_LoadClassMetadataEventArgs`
-onClassMetadataNotFound	MappingException	No	`_OnClassMetadataNotFoundEventArgs`
+| Event |  Dispatched by | Lifecycle Callback | Passed Argument |
+|---|:---:|:---:|:---:|
+| preRemove | $em->remove() | Yes | `_LifecycleEventArgs`_ |
+| postRemove | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+| prePersist | $em->persist() on initial persist | Yes | `_LifecycleEventArgs`_ |
+| postPersist | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+| preUpdate | $em->flush() | Yes | `_PreUpdateEventArgs`_ |
+| postUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+| postLoad | Loading from database | Yes | `_LifecycleEventArgs`_ |
+| loadClassMetadata | Loading of mapping metadata | No | `_LoadClassMetadataEventArgs` |
+| preFlush | $em->flush() | Yes | `_PreFlushEventArgs`_ |
+| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
+
+
+
+
+
+
 preFlush	$em->flush()	Yes	`_PreFlushEventArgs`_
 onFlush	$em->flush()	No	`_OnFlushEventArgs`
 postFlush	$em->flush()	No	`_PostFlushEventArgs`
@@ -69,5 +80,14 @@ puis
 
 ```sh
   What event do you want to subscribe to?:
- > console.command```
+ > console.command
+ OU
+ > kernel.response
+ ```
+
+ ## LifecycleCallbacks : mettre à jour une entité
+
+ pour utiliser les LifecycleCallbacks, il faut rajouter une anotation dans l'entité :
+ ```sh
+ * @ORM\HasLifecycleCallbacks()
  ```

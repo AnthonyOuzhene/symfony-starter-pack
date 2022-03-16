@@ -48,3 +48,12 @@ composer remove messenger
 ```sh
 bin/console
 ```
+
+### Si un projet est déja installé 
+
+1. Lancer le serveur webphp
+2. composer install
+3. faire le fichier .env.local et remplir mysql : database
+4. faire un create database
+5. lancer et appliquer les migrations
+6. fixtures load
