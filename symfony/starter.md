@@ -28,12 +28,18 @@ mv skeleton/.* ./
 rmdir skeleton/
 ```
 
+## Pack avec tous les composants necessaires
+
+`composer require webapp`
+
 ## Liste des composants necessaires (si pas installation de webapp)
 
 
 `composer require form annotations orm twig asset validator`
 
 `composer require --dev debug-bundle maker profiler faker fixtures`
+
+`composer require symfony/apache-pack`
 
 
 ## Si installation de webpack pour composant
@@ -51,7 +57,7 @@ bin/console
 
 ### Si un projet est déja installé 
 
-1. Lancer le serveur webphp
+1. Lancer le serveur web php
 2. composer install
 3. faire le fichier .env.local et remplir mysql : database
 4. faire un create database

@@ -23,7 +23,7 @@ Pour contourner erreur circle, il faut utiliser un contexte dans le Cotnroller :
 return $this->json($movieList, Response::HTTP_OK, [], ['groups' => "api_movie_list"]);
 ```
 
-## Gérer la sécurité d'une API
+## Gérer la sécurité d'une API avec un Token
 
 - La seule différence que la sécurité dans le code connu dans le navigateur est au niveau de l'authentification. On utilisera un **Token** pour authenfier un user sur une api.
 
@@ -166,4 +166,34 @@ nelmio_cors:
             allow_origin: ['*']
             allow_headers: ['*']
             allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+```
+
+## Validation
+
+
+1. Installation du composant
+
+```sh
+composer require symfony/validator
+```
+
+2. Utilisation
+
+`use Symfony\Component\Validator\Validator\ValidatorInterface;`
+
+Ce Service Validator valide tous les asserts de l'objet.
+
+```sh
+ $errors = $validator->validate($user);
+
+        if (count($errors) > 0)
+        {
+            // TODO comment faire pour mutulaliser / simplifier l'envoi d'erreur
+            $data = [
+                'error' => true,
+                'message' => (string) $errors,
+            ];
+
+            return $this->json($data, Response::HTTP_NOT_FOUND);
+        }
 ```

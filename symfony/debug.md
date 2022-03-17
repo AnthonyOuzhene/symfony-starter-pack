@@ -20,3 +20,9 @@ bin/console debug:router
 # Permet de vérifier la liste des routes
 bin/console debug:autowiring
 ```
+
+## Liste des events disponibles
+
+```sh
+app/console debug:event-dispatcher
+```

@@ -99,6 +99,12 @@ bin/console make:command
 ```sh
 bin/console make:subscriber
 ```
+
+## Création d'un test
+
+```sh
+bin/console make:test
+```
 ## Sinon RTFM
 
 ```sh

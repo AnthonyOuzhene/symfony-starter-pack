@@ -20,20 +20,9 @@ Le Service Container interbient quand on met dans Controller les class en argume
 | postLoad | Loading from database | Yes | `_LifecycleEventArgs`_ |
 | loadClassMetadata | Loading of mapping metadata | No | `_LoadClassMetadataEventArgs` |
 | preFlush | $em->flush() | Yes | `_PreFlushEventArgs`_ |
-| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
-| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
-| preUpdate | $em->flush() | Yes | `_LifecycleEventArgs`_ |
-
-
-
-
-
-
-preFlush	$em->flush()	Yes	`_PreFlushEventArgs`_
-onFlush	$em->flush()	No	`_OnFlushEventArgs`
-postFlush	$em->flush()	No	`_PostFlushEventArgs`
-onClear	$em->clear()	No	`_OnClearEventArgs`
-
+| onFlush | $em->flush() | No | `_OnFlushEventArgs` |
+| postFlush | $em->flush() | No | `_PostFlushEventArgs` |
+| onClear | $em->clear() | No | `_OnClearEventArgs` |
 
 
 
