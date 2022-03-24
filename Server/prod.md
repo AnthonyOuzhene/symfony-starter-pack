@@ -27,6 +27,9 @@ Pour éconnomiser les ressources hardware, on installe pas d'interface graphique
 
 1. Aller sur `https://kourou.oclock.io/ressources/vm-cloud/` et démarrer la VM
 
+2. Se connecter depuis un terminal avec la commande SSH suivante :
+`ssh student@anthonyouzhene-server.eddi.cloud`
+
 2. Vérifier la présence des logiciels suivants depuis le terminal :
 
 `nom du logiciel --version` :
@@ -38,15 +41,19 @@ Pour éconnomiser les ressources hardware, on installe pas d'interface graphique
 - composer
 - nano
 
+3. Se rendre dans le dossier html avec commande `cd /var/www/html`
+
 ## Installation du projet sur serveur prod
 
-- git clone
-- composer install (dans projet)
-connexion à mysql : ``sudo mysql`
+- git clone (s'assure que le projet est bien merge dans master)
+- rentrer dans le projet et faire un composer install
+connexion à mysql : `sudo mysql`
 - créer un utilisateur en BDD
 ```sh
 CREATE USER 'le nom du user a crer'@'localhost' IDENTIFIED BY 'le password à creer';
 GRANT ALL PRIVILEGES ON *.* TO 'le nom du user crée'@'localhost'
+GRANT ALL PRIVILEGES ON *.* TO got@'localhost';
+
 ```
 - configurer la chaine de connexion à la BDD dans le .env.local
 
@@ -55,7 +62,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'le nom du user crée'@'localhost'
 nano .env.local
 ```
 - Creer la database
-- aller sur 
+- aller sur `http://anthonyouzhene-server.eddi.cloud/`
 - créer la structure BDD avec migrations
 - créer un user ADMIN
 
