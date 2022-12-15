@@ -4,7 +4,7 @@ dans AbstractController, une méthode json est déjà codé pour transformer l'o
 `use Symfony\Component\Serializer\SerializerInterface;`
 
 
-Pour contourner erreur circle, il faut utiliser un contexte dans le Cotnroller : Les groups !
+Pour contourner erreur circle, il faut utiliser un contexte dans le Controller : Les groups !
 
 ## Utilisation des groups pour rendre en json
 
@@ -119,7 +119,7 @@ api_login_check:
 
 ## UTILISATION
 
-**1. Dans Thunder Clienbt ou Insomnia; créer une route de Login en POST**
+**1. Dans Thunder Client ou Insomnia; créer une route de Login en POST**
 
 **2. Dans body mettre les infos dont on a besoin :**
 ```sh
@@ -197,3 +197,28 @@ Ce Service Validator valide tous les asserts de l'objet.
             return $this->json($data, Response::HTTP_NOT_FOUND);
         }
 ```
+
+
+
+# Avec API PLATFORM
+
+**1. Installation du bundle**
+
+```sh
+symfony composer req api
+```
+
+**2. Configurer API Platform**
+
+### Si PHP version < 8.0 => Utiliser les annotations et ajouter en commentaire de l'entité + le Use ci-dessous :
+`use ApiPlatform\Core\Annotation\ApiResource;`
+    @ApiResource()
+
+### Si PHP version > 7.4 => Utiliser directement l'attribut en déhors des commentaires et le use ci-dessous
+`use ApiPlatform\Core\Metadata\ApiResource;`
+#[ApiResource()]
+
+**2. aller sur localhost/api**
+
+Pour les entités sur lesquels le `ApiResource()` est annoté ou attribué, toutes les api avec méthodes CRUD seront générées et testables depuis l'url localhost/api.
+

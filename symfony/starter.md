@@ -55,6 +55,24 @@ composer remove messenger
 bin/console
 ```
 
+## Installer un serveur de developpement Symfony
+
+Installation du serveur Symfony CLI
+
+```sh
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+sudo apt install symfony-cli
+```
+
+Ensuire lancer le serveur Symfony avec :
+```sh
+symfony server:start
+```
+OU
+```sh
+symfony serve
+```
+
 ### Si un projet est déja installé 
 
 1. Lancer le serveur web php
