@@ -54,12 +54,33 @@ La configuration du tableau de bord est définie dans la méthode `configureMenu
         yield MenuItem::linkToDashboard('Salon de tatouage', 'fa fa-home');
         yield MenuItem::linkToCrud('Activités', 'fa fa-briefcase', Activity::class);
         yield MenuItem::linkToCrud('Categories', 'fa fa-list', Category::class);
-        yield MenuItem::linkToCrud('Livre d\'or', 'fa fa-comment', Comment::class);
+        yield MenuItem::linkToCrud('Livre dor', 'fa fa-comment', Comment::class);
         yield MenuItem::linkToCrud('Gallerie', 'fa fa-image', Gallery::class);
         yield MenuItem::linkToCrud('Blog', 'fa fa-blog', Post::class);
         yield MenuItem::linkToCrud('Prestations', 'fa fa-pen', Service::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-users', User::class);
-    
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        #yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 ```
+
+### Les champs des entités
+
+Les champs sont paramétrable dans la méthode `configureFileds()`
+
+`````sh
+    public function configureFields(string $pageName): iterable
+    {
+        return [
+            #hideOnForm() permet de cacher l'ID sur le formulaire d'ajout et de modification
+            IdField::new('id')->hideOnForm(),
+            TextField::new('name', "Nom du service"),
+            IntegerField::new('price', "Prix"),
+            TextareaField::new('description', "Description"),
+            #hideOnIndex() permet de cacher la photo sur la liste des services
+            TextareaField::new('picture', "Photo du service")->hideOnIndex(),
+            AssociationField::new('activity_name'),
+            AssociationField::new('category_name'),
+        ];
+    }
+
+````
