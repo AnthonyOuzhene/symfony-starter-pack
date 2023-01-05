@@ -120,3 +120,9 @@ La propriété main_picture stocke uniquement le nom de l'image téléchargée e
         ];
     }
 ```
+
+## Pensez à définir le chemin dans le `.gitignore` pour ne pas committer les photos
+
+```sh
+/public/uploads/gallery/
+```
