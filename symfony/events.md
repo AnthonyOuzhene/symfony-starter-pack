@@ -26,7 +26,7 @@ Le Service Container interbient quand on met dans Controller les class en argume
 
 
 
-## Les cycles de vie : emoji_tiger
+## Les cycles de vie
 
 Tous les différents états par lesquels passent un élement du code. 
 On se demande alors quels sont les évènements qui me disent si je peux exécuter du code.

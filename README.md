@@ -24,9 +24,11 @@ Un récap des informations et commandes dans Symfony
 - [Les forms](symfony/forms.md)
 - [Security](symfony/_security.md)
 - [Voter](symfony/voter.md)
-- [Slugger](symfony/slugger.md)
+- [Service](symfony/service.md)
 - [Commands](symfony/commands.md)
-- [Events](symfony/events.md)
 
+## A propos de Easy Admin
 
-
+- [Easy Admin](easyadmin/easyAdmin.md)
+- [CKEditor](easyadmin/CKEditor.md)
+- [Vichuploader](easyadmin/Vichuploader.md)
