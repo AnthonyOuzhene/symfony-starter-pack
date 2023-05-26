@@ -23,11 +23,12 @@ Exemple : Dans le cas où le prix du produit est inférieur à 0, une exception 
 <?php
 ```
 
-2/ Dans le test, on vérifie que l'exception est bien lancée
+2/ Dans le test, on vérifie que l'exception est bien lancée => Si le prix est positif, on doit avoir une exception donc test échoue
 
 ```php
     public function testComputeTVAException()
     {
+        // Si le prix est positif, on doit avoir une exception donc test échoue
         $product = new Product("test", 'pas un produit alimentaire', 5);
         $this->expectException(('Exception'););
         $product->computeTVA();
@@ -57,6 +58,7 @@ Tests: 3, Assertions: 3, Failures: 1.
 ```php
     public function testNegativePriceComputeTVA()
     {
+        // Si le prix est négatif, l'exception est levée donc le test est réussi
         $product = new Product('un produit', 'pas un produit alimentaire', -20);
         $this->expectException('Exception');
         $product->computeTVA();
