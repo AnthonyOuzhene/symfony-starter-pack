@@ -1,4 +1,4 @@
-# Tests unitaires avec PHPUnit
+# Tests unitaires avec PHPUnit et Symfony
 
 Ces tests garantissent que les unités individuelles du code source (par exemple une seule classe) se comportent comme prévu.
 
@@ -58,6 +58,7 @@ Tous les tests doivent être écrits dans des classes de Test. dans un projet Sy
 - cette classe doit être contenu dans le dossier tests du projet
 - il faut reproduire l'arborescence de la classe que vous souhaitez tester
 - la classe de test doit avoir le même nom que la classe de test, suffixé par Test.
+- Nommer bien les méthodes de test. Leur nom doit être facilement compréhensible pour d'autres développeurs, afin qu'en un coup d'œil, on puisse comprendre ce qui est testé.
 
 Exemple :
 
