@@ -154,3 +154,11 @@ sudo apt-get install php-xdebug
 - si une ligne est verte, le code est correctement exécuté par les tests
 - si une ligne est rouge, le code n'est pas exécuté par les tests
 - Si une ligne est orange, le code est incomplet
+
+## Réglage comportement PHPUnit
+
+Le fichier de configuration `phpunit.xml.dist` peut être modifié pour :
+
+- afficher des couleurs lors des tests
+- choisir le dossier de tests
+- etc.
